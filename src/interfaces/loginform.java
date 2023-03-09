@@ -79,9 +79,11 @@ public class loginform extends javax.swing.JFrame {
         );
 
         usernameLabel.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
+        usernameLabel.setForeground(new java.awt.Color(0, 51, 102));
         usernameLabel.setText("username :");
 
         passwordLabel.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
+        passwordLabel.setForeground(new java.awt.Color(0, 51, 102));
         passwordLabel.setText("password :");
 
         usernameField.addActionListener(new java.awt.event.ActionListener() {
