@@ -146,8 +146,7 @@ public class loginform extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(255, 0, 0));
         jButton1.setIcon(new javax.swing.ImageIcon("F:\\Projects\\chat\\resources\\closeicon.png")); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);

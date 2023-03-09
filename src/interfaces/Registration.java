@@ -1,17 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package interfaces;
 
+import javax.swing.*;
+import Logic.MyRegFormService;
 import java.io.File;
 import javax.swing.JFileChooser;
 
-/**
- *
- * @author Anonymous
- */
+
 public class Registration extends javax.swing.JFrame {
 
     /**
@@ -20,6 +15,8 @@ public class Registration extends javax.swing.JFrame {
     public Registration() {
         initComponents();
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -111,6 +108,12 @@ public class Registration extends javax.swing.JFrame {
         useridField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 useridFieldActionPerformed(evt);
+            }
+        });
+
+        usernameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameFieldActionPerformed(evt);
             }
         });
 
@@ -257,7 +260,7 @@ public class Registration extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void useridFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_useridFieldActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_useridFieldActionPerformed
 
     private void imageselectorButtonComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_imageselectorButtonComponentShown
@@ -275,8 +278,19 @@ public class Registration extends javax.swing.JFrame {
     }//GEN-LAST:event_imageselectorButtonActionPerformed
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
-        // TODO add your handling code here:
+    JTextField useridField = this.useridField;
+    JTextField usernameField = this.usernameField;
+    JTextField nicknameField = this.nicknameField;
+    JTextField emailField = this.emailField;
+    JTextField passwordField=this.passwordField;
+
+    MyRegFormService myRegFormService = new MyRegFormService(useridField, usernameField, nicknameField, emailField, passwordField);
+    myRegFormService.registerUser();
     }//GEN-LAST:event_submitButtonActionPerformed
+
+    private void usernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameFieldActionPerformed
+        
+    }//GEN-LAST:event_usernameFieldActionPerformed
 
     /**
      * @param args the command line arguments

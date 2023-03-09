@@ -22,6 +22,8 @@ public class ChatClient {
             //2. Locating the remote object
             UserDao userdao = (UserDao) myReg.lookup("MyUserServer");
             
+            
+            
             //3. Invoke the methods
             
             // Create a new user
