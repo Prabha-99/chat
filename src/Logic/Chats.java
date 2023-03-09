@@ -1,5 +1,5 @@
-package projo;
-// Generated Mar 8, 2023 11:23:32 AM by Hibernate Tools 4.3.1
+package Logic;
+
 
 
 import java.util.Date;

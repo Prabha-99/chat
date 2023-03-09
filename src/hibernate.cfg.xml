@@ -6,7 +6,7 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/chat?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
-    <mapping resource="projo/Users.hbm.xml"/>
-    <mapping resource="projo/Chats.hbm.xml"/>
+    <mapping resource="Logic/Users.hbm.xml"/>
+    <mapping resource="Logic/Chats.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
