@@ -1,7 +1,10 @@
 package Logic;
 
-import java.io.Serializable;
 
+
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Users  implements Serializable {
 
@@ -12,6 +15,9 @@ public class Users  implements Serializable {
      private String nickName;
      private String password;
      private String profileImage;
+     private Set roomses = new HashSet(0);
+     private Set chatses = new HashSet(0);
+     private Set subscriptionses = new HashSet(0);
 
     public Users() {
     }
@@ -20,13 +26,16 @@ public class Users  implements Serializable {
     public Users(String userId) {
         this.userId = userId;
     }
-    public Users(String userId, String userName, String email, String nickName, String password, String profileImage) {
+    public Users(String userId, String userName, String email, String nickName, String password, String profileImage, Set roomses, Set chatses, Set subscriptionses) {
        this.userId = userId;
        this.userName = userName;
        this.email = email;
        this.nickName = nickName;
        this.password = password;
        this.profileImage = profileImage;
+       this.roomses = roomses;
+       this.chatses = chatses;
+       this.subscriptionses = subscriptionses;
     }
    
     public String getUserId() {
@@ -70,6 +79,27 @@ public class Users  implements Serializable {
     
     public void setProfileImage(String profileImage) {
         this.profileImage = profileImage;
+    }
+    public Set getRoomses() {
+        return this.roomses;
+    }
+    
+    public void setRoomses(Set roomses) {
+        this.roomses = roomses;
+    }
+    public Set getChatses() {
+        return this.chatses;
+    }
+    
+    public void setChatses(Set chatses) {
+        this.chatses = chatses;
+    }
+    public Set getSubscriptionses() {
+        return this.subscriptionses;
+    }
+    
+    public void setSubscriptionses(Set subscriptionses) {
+        this.subscriptionses = subscriptionses;
     }
 
 

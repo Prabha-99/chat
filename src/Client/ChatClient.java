@@ -1,7 +1,7 @@
 
 package Client;
 
-import Logic.UserDao;
+import Logic.ChatServices;
 import Logic.Users;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -20,7 +20,7 @@ public class ChatClient {
             //1. Locate the registry
             Registry myReg = LocateRegistry.getRegistry("localhost",5000);
             //2. Locating the remote object
-            UserDao userdao = (UserDao) myReg.lookup("MyUserServer");
+            ChatServices userdao = (ChatServices) myReg.lookup("MyUserServer");
             
             
             
@@ -28,11 +28,11 @@ public class ChatClient {
             
             // Create a new user
             Users users = new Users();
-            users.setUserId("U002");
-            users.setUserName("Alba");
-            users.setEmail("alba@gmail.com");
-            users.setNickName("alba");
-            users.setPassword("alba@123");
+            users.setUserId("U003");
+            users.setUserName("Olivia");
+            users.setEmail("olivia@gmail.com");
+            users.setNickName("olivia");
+            users.setPassword("olivia@123");
             users.setProfileImage(null);
             userdao.save(users);
             

@@ -4,4 +4,6 @@
   <schema-selection match-catalog="chat"/>
   <table-filter match-name="users"/>
   <table-filter match-name="chats"/>
+  <table-filter match-name="subscriptions"/>
+  <table-filter match-name="rooms"/>
 </hibernate-reverse-engineering>

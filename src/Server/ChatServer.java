@@ -3,7 +3,7 @@ package Server;
 
 
 import Logic.NewHibernateUtil;
-import Logic.UserImplementation;
+import Logic.ChatServiceImpl;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -22,7 +22,7 @@ public class ChatServer {
             Session session = NewHibernateUtil.getSessionFactory().openSession();
             
             //2. Binding the remote object
-            UserImplementation userImplementation = new UserImplementation(session);
+            ChatServiceImpl userImplementation = new ChatServiceImpl(session);
             myReg.rebind("MyUserServer",userImplementation);
             
             //To identify server is running
