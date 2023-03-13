@@ -1,9 +1,17 @@
 
 package Logic;
 
+import java.rmi.RemoteException;
 import javax.swing.*;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
 
-public class MyRegFormService {
+public class MyRegFormService implements UserManagement {
+    
+    
+    
+    private SessionFactory sessionFactory;
     
     //Instance Variables
     private final JTextField useridField; 
@@ -20,9 +28,24 @@ public class MyRegFormService {
         this.passwordField = passwordField;
     }
     
-    public void registerUser(){
-        
-        
+    
+
+    public MyRegFormService() {
+        Configuration configuration = new Configuration().configure();
+        StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
+            .applySettings(configuration.getProperties());
+        sessionFactory = configuration.buildSessionFactory(builder.build());
+    }
+    
+    
+    
+//    public void registerUser(){    
+//    }
+    
+    
+
+    @Override
+    public void save(Users users) throws RemoteException {
         
         String userID=useridField.getText();
         String userName=usernameField.getText();
@@ -46,8 +69,8 @@ public class MyRegFormService {
         emailField.setText("");
         passwordField.setText("");
         
-        
     }
+    
 
     
     

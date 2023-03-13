@@ -37,6 +37,8 @@ public class mainInterface extends javax.swing.JFrame {
         searchField = new javax.swing.JTextField();
         toprightPanel = new javax.swing.JPanel();
         charareaPanel = new javax.swing.JPanel();
+        chatField = new javax.swing.JTextField();
+        sendButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -139,7 +141,7 @@ public class mainInterface extends javax.swing.JFrame {
         toprightPanel.setLayout(toprightPanelLayout);
         toprightPanelLayout.setHorizontalGroup(
             toprightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 681, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         toprightPanelLayout.setVerticalGroup(
             toprightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,15 +150,38 @@ public class mainInterface extends javax.swing.JFrame {
 
         charareaPanel.setBackground(new java.awt.Color(229, 253, 229));
 
+        chatField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chatFieldActionPerformed(evt);
+            }
+        });
+
+        sendButton.setIcon(new javax.swing.ImageIcon("F:\\Projects\\chat\\resources\\sendicon.png")); // NOI18N
+        sendButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sendButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout charareaPanelLayout = new javax.swing.GroupLayout(charareaPanel);
         charareaPanel.setLayout(charareaPanelLayout);
         charareaPanelLayout.setHorizontalGroup(
             charareaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(charareaPanelLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(chatField, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sendButton, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         charareaPanelLayout.setVerticalGroup(
             charareaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, charareaPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(charareaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chatField, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sendButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
@@ -205,6 +230,14 @@ public class mainInterface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_searchFieldActionPerformed
 
+    private void chatFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chatFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chatFieldActionPerformed
+
+    private void sendButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sendButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -242,12 +275,14 @@ public class mainInterface extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel charareaPanel;
+    private javax.swing.JTextField chatField;
     private javax.swing.JButton chaticon;
     private javax.swing.JButton homeicon;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JButton profileicon;
     private javax.swing.JTextField searchField;
     private javax.swing.JPanel searchPanel;
+    private javax.swing.JButton sendButton;
     private javax.swing.JPanel sidePanel;
     private javax.swing.JPanel sidetop1;
     private javax.swing.JPanel toprightPanel;

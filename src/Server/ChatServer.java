@@ -2,8 +2,9 @@
 package Server;
 
 
+import Logic.ChatServices;
 import Logic.NewHibernateUtil;
-import Logic.ChatServiceImpl;
+import Logic.ChatServicesImpl;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -15,6 +16,7 @@ public class ChatServer {
     public static void main(String[] args) {
         
         try {
+            
             //Creating the RMI Registry
             Registry myReg = LocateRegistry.createRegistry(5000);
             
@@ -22,8 +24,8 @@ public class ChatServer {
             Session session = NewHibernateUtil.getSessionFactory().openSession();
             
             //2. Binding the remote object
-            ChatServiceImpl userImplementation = new ChatServiceImpl(session);
-            myReg.rebind("MyUserServer",userImplementation);
+            ChatServices cs=new ChatServicesImpl();
+            myReg.rebind("MyUserServer",cs);
             
             //To identify server is running
             System.out.println("My Users Server is Running...");
