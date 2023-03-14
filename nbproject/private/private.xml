@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/Projects/chat/src/Logic/ChatServices.java</file>
-            <file>file:/F:/Projects/chat/src/Logic/ChatServicesImpl.java</file>
-            <file>file:/F:/Projects/chat/src/Server/ChatServer.java</file>
+            <file>file:/F:/Projects/chat/src/Logic/Client2.java</file>
+            <file>file:/F:/Projects/chat/src/Logic/MessageArea.java</file>
             <file>file:/F:/Projects/chat/src/Client/ChatClient.java</file>
+            <file>file:/F:/Projects/chat/src/interfaces/mainInterface.java</file>
             <file>file:/F:/Projects/chat/src/Logic/Client1.java</file>
         </group>
     </open-files>
