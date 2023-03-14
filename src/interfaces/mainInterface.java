@@ -5,18 +5,25 @@
  */
 package interfaces;
 
-/**
- *
- * @author Anonymous
- */
+import Client.ChatClient;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.util.Scanner;
+import javax.swing.JTextArea;
+
+
 public class mainInterface extends javax.swing.JFrame {
 
-    /**
-     * Creates new form mainInterface
-     */
+
     public mainInterface() {
         initComponents();
     }
+
+    
+    public JTextArea getChatArea(String name) {
+    return chatArea;
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -39,6 +46,8 @@ public class mainInterface extends javax.swing.JFrame {
         charareaPanel = new javax.swing.JPanel();
         chatField = new javax.swing.JTextField();
         sendButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        chatArea = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -163,6 +172,10 @@ public class mainInterface extends javax.swing.JFrame {
             }
         });
 
+        chatArea.setColumns(20);
+        chatArea.setRows(5);
+        jScrollPane1.setViewportView(chatArea);
+
         javax.swing.GroupLayout charareaPanelLayout = new javax.swing.GroupLayout(charareaPanel);
         charareaPanel.setLayout(charareaPanelLayout);
         charareaPanelLayout.setHorizontalGroup(
@@ -173,11 +186,16 @@ public class mainInterface extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(sendButton, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(31, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, charareaPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
         charareaPanelLayout.setVerticalGroup(
             charareaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, charareaPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1)
+                .addGap(18, 18, 18)
                 .addGroup(charareaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(chatField, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sendButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -235,12 +253,9 @@ public class mainInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_chatFieldActionPerformed
 
     private void sendButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendButtonActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_sendButtonActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -275,9 +290,11 @@ public class mainInterface extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel charareaPanel;
+    private javax.swing.JTextArea chatArea;
     private javax.swing.JTextField chatField;
     private javax.swing.JButton chaticon;
     private javax.swing.JButton homeicon;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JButton profileicon;
     private javax.swing.JTextField searchField;

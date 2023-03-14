@@ -278,14 +278,14 @@ public class Registration extends javax.swing.JFrame {
     }//GEN-LAST:event_imageselectorButtonActionPerformed
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
-    JTextField useridField = this.useridField;
-    JTextField usernameField = this.usernameField;
-    JTextField nicknameField = this.nicknameField;
-    JTextField emailField = this.emailField;
-    JTextField passwordField=this.passwordField;
-
-    MyRegFormService myRegFormService = new MyRegFormService(useridField, usernameField, nicknameField, emailField, passwordField);
-    myRegFormService.registerUser();
+//    JTextField useridField = this.useridField;
+//    JTextField usernameField = this.usernameField;
+//    JTextField nicknameField = this.nicknameField;
+//    JTextField emailField = this.emailField;
+//    JTextField passwordField=this.passwordField;
+//
+//    MyRegFormService myRegFormService = new MyRegFormService(useridField, usernameField, nicknameField, emailField, passwordField);
+//    myRegFormService.registerUser();
     }//GEN-LAST:event_submitButtonActionPerformed
 
     private void usernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameFieldActionPerformed
