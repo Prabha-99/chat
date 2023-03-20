@@ -32,6 +32,7 @@ public class MessageReceiver implements Runnable{
                     String finalMessage = message; // make a final copy for thread safety
                     SwingUtilities.invokeLater(() -> mi.setChatArea(finalMessage, mi.getChatArea()));
                     message = client.receiveMessage();
+                    
                 }
             }
         } catch (RemoteException ex) {

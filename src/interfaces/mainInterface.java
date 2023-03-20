@@ -3,8 +3,10 @@ package interfaces;
 
 import Client.ChatClient;
 import Logic.MessageReceiver;
+import Logic.MessageSender;
 import java.rmi.NotBoundException;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 
 
@@ -18,10 +20,22 @@ public class mainInterface extends javax.swing.JFrame {
     public JTextArea getChatArea() { //Getter for chatArea
         return chatArea;
     }
+
+    public JTextField getChatField() {//Getter for chatField
+        return chatField;
+    }
+    
+    
     
     public void setChatArea(String content, JTextArea textArea) { //Setter for chatArea
         textArea.setText(content);
     }
+
+    public void setChatField(JTextField chatField) {//Setter for chatField
+        this.chatField = chatField;
+    }
+    
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -246,7 +260,19 @@ public class mainInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_chatFieldActionPerformed
 
     private void sendButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendButtonActionPerformed
-
+           
+           
+           try{
+               
+               ChatClient client = new ChatClient("");
+               mainInterface mi = new mainInterface();
+               MessageSender messageSender = new MessageSender(client,mi);
+               
+               Thread senderThread=new Thread(messageSender);
+               senderThread.start();
+               
+           }catch(Exception e){
+           }
     }//GEN-LAST:event_sendButtonActionPerformed
 
     public static void main(String args[]) {

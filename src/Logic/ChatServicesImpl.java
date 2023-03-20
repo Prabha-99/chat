@@ -1,17 +1,17 @@
 
 package Logic;
 
-import Client.ChatClient;
+
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
-import org.hibernate.Session;
+
 
 
 public class ChatServicesImpl extends UnicastRemoteObject implements ChatServices{
     
-    private List<String> messageList = new ArrayList<>();//Creating a Message List Object
+    private final List<String> messageList = new ArrayList<>();//Creating a Message List Object
 
     public ChatServicesImpl()throws RemoteException {//Throwing Remote Exception in Default Constructor
         
