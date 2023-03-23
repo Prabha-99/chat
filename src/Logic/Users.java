@@ -1,20 +1,18 @@
 package Logic;
 
 
-
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Users  implements Serializable {
-
-
-     private String userId;
-     private String userName;
-     private String email;
-     private String nickName;
-     private String password;
-     private String profileImage;
+public class Users implements Serializable {
+   
+    private String userId;
+    private String userName;
+    private String email;
+    private String nickName;
+    private String password;
+    private String profileImage;
      private Set roomses = new HashSet(0);
      private Set chatses = new HashSet(0);
      private Set subscriptionses = new HashSet(0);

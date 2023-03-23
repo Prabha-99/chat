@@ -29,7 +29,7 @@ public class MessageSender implements Runnable{
              
              while(true){
                  String chatContent;//Local variable
-                 chatContent=mi.getChatField().getText();//Storing the text which user types in the chatField
+                 chatContent=mi.getChatField();//Storing the text which user types in the chatField
                  client.sendMessage(chatContent);//sending that content through client's 'sendMessage' method
              }
          }catch(Exception e){

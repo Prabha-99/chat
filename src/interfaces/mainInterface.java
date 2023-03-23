@@ -21,8 +21,8 @@ public class mainInterface extends javax.swing.JFrame {
         return chatArea;
     }
 
-    public JTextField getChatField() {//Getter for chatField
-        return chatField;
+    public String getChatField() {//Getter for chatField
+        return chatField.getText();
     }
     
     
